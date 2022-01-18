@@ -1,0 +1,55 @@
+1. a. SDLC adalah tahapan yang digunakan dalam pembuatan atau pengembangan sistem informasi agar dalam pengerjaan sistem berjalan secara terstruktur, efektif dan sesuai dengan tujuan yang diinginkan.
+   b. Bug Life Cycle ada 13 langkah, yaitu sebagai berikut :
+      1. New
+      2. Assigned
+      3. Open
+      4. Fixed
+      5. Pending retest
+      6. Retest
+      7. Reopened
+      8. Verified
+      9. Closed
+      10. Duplicate
+      11. Rejected
+      12. Deferred
+      13. Not a bug
+   c. Severity :
+      - Suggest = Menyeratakan bahasa pada setiap menu, contoh jika menggunakan bahasa inggris maka disemua menu menggunakan bahasa inggris
+      - Bug Minor = Jarak submit dan cancel tidak sejajar pada suatu form
+      - Bug Medium = Ketika edit data, data tidak terupdate, Saat penginputan data baru, data yg sudah diinputkan tidak masuk ke dalam data base
+      - Bug Major = Delete satu data, tetapi yang terupdate semua data
+      - Bug Crash = Load data  yang tidak menggunakan filter pada suatu list dapat menyebabkan crash apabila data terlalu banyak
+      - Bug Undoable = Import migrasi data awal tidak berhasil
+      
+      Priority : 
+      - Bug Low = Warna status dibedakan, contoh jika reject waran font merah jika confirm warna font hijau
+      - Bug Mid = Saat penginputan data baru, data yg sudah diinputkan tidak masuk ke dalam data base
+      - Bug High = Tidak bisa melakukan absen pada aplikasi 
+      - Bug ASAP = Tidak bisa login ke dalam aplikasi
+   d. Equivalence Partitioning adalah pengujian setiap inputan data di kelompokan menjadi beberapa partisi dan kemudian dibandingankan outputnya. 
+      Contoh, dengan mengambil sebuah parameter “bulan“. Jangkauan bulan adalah 1 sampai 12, mewakili Januari-Desember. Jangkauan ini disebut partisi. 
+      Dalam contoh ini ada dua partisi lebih lanjut rentang tidak valid. Partisi pertama akan menjadi tidak valid <= 0 dan partisi tidak valid kedua akan menjadi> = 13.
+      
+      Boundary Value Analysis adalah pengujian data dengan teknik inputan melebihi batasan suatu data. 
+      Contoh, penginputan harga barang maka dapat dilakukan testing menggunakan angka negatif atau inputan angka yang tidak diperbolehkan dalam sebuah harga.
+
+2. Skenario                                     Tes Positif                                    Hasil yang diharapkan              Hasil         Keterangan          Tes Negatif                         Hasil yang diharapkan                    Keterangan
+
+   - Click menu Create Tiket                    Klik pada menu                                 Display list customer                                                
+   - Select Customer                            Pilih 1 customer                               Display service category list                                        pilih lebih dari 1 user
+   - Select service category (connectivity)     Select service category (connectivity)         Display suggest SID
+   - Type sugget SID                            Type suggest SID sesuai dengan yang muncul     Display SID                                                          Type suggest SID secara asal        SID tidak muncul    
+   - Select SID                                 Select SID                                     Display IP WAN                                                       Tidak memilih SID                   IP WAN tidak muncul
+   - Select location                            Select location yang tersedia                  Display service name list                                            Tidak memilih lokasi                List nama service tidak muncul
+   - Select service name                        Select service name                            Display symptom category list                                        Ketik lokasi secara manual          Tidak bisa diketik
+   - Select symptom category                    Pilih sympton category yg tersedia                                                                                  Ketik manual sympton category       Tidak bisa diketik
+   - Type symptom detail
+   - Type PIC Name
+
+3.
+
+4. a. Ada 2 Perbedaan :
+      1. Perbedaan pertama, terdapat pada id, mock API type data id adalah string sedang pada real api type data id adalah int 
+      2. Perbedaan kedua, terdapat pada parameter “last name”, mock API adalah “lastName” pada real api adalah “last_name”
+   b. 1. cannot implicitly convert type 'string' to 'int'
+      2. missing parameter “lastName”
